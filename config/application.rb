@@ -8,6 +8,15 @@ Bundler.require(*Rails.groups)
 
 module DisplayingAssociationsRailsLab
   class Application < Rails::Application
+    # Initialize configuration defaults for originally generated Rails version.
+    config.load_defaults 7.1
+
+    # Asset pipeline configuration
+    config.assets.enabled = true
+    config.assets.version = '1.0'
+    config.assets.compile = true
+    config.assets.digest = false
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
